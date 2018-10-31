@@ -22,11 +22,10 @@ To simplify the review process, we suggest that authors include the following in
  * explain how each of the definitions and theorems in the paper corresponds to the formalizations in the artifact;
  * example:
 
-|  Definition / Theorem                          | Paper                   | File   |  Name of formalization | Notation   |
-|------------------------------------------------|-------------------------|--------|------------------------|------------|
-|  Type system of the<br>simply typed λ-calculus |  Page 5,<br>Figure&nbsp;2  | stlc.v |  `Inductive typing`    | `G ⊢ t: T` |
-|  Preservation Theorem                          |  Page 7,<br>Theorem&nbsp;1 | stlc.v |  `Theorem preservation`|            |
-
+ |  Definition / Theorem                          | Paper                   | File   |  Name of formalization | Notation   |
+ |------------------------------------------------|-------------------------|--------|------------------------|------------|
+ |  Type system of the<br>simply typed λ-calculus |  Page 5,<br>Figure&nbsp;2  | stlc.v |  `Inductive typing`    | `G ⊢ t: T` |
+ |  Preservation Theorem                          |  Page 7,<br>Theorem&nbsp;1 | stlc.v |  `Theorem preservation`|            |
 
 3. An overview of the libraries and proof frameworks that are used in the proof:
  * explain in what way the proof relies on existing frameworks;
