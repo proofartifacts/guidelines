@@ -59,6 +59,7 @@ Inductive term :=
 7. Explicitly state and justify all axioms, assumptions, and unfinished parts of the proof:
  
    _We encourage researchers to spend their time on the most important part of the work instead of reproving well-known results. At the same time, given the limited time for reviewing the artifact, it is difficult for the reviewer to assess whether the modified formalization is equivalent to the paper formulation, whether that modification is significant, and whether a lemma with an incomplete proof is obvious._
+   
   * clearly mark and justify all unproved hypotheses in the proof, such as
     - known results that can be cited,
     - axioms that change the logic,
