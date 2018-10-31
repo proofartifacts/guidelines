@@ -1,8 +1,3 @@
-# Proof Artifacts
-## Guidelines for Submission and Reviewing
-_last updated October 31, 2018 by Marianna Rapoport_
-
-
 The goal of the proof-artifact evaluation is to recognize and promote high-quality proof artifacts, as well as verify that the mechanized formalization of a paper
 * faithfully represents the definitions and theorems in the paper that were claimed to be mechanized, and
 * contains complete proofs for all theorems, except for clearly marked and documented  hypotheses.
