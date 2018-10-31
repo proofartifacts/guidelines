@@ -24,8 +24,8 @@ To simplify the review process, we suggest that authors include the following in
 
 |  Definition / Theorem                          | Paper                   | File   |  Name of formalization | Notation   |
 |------------------------------------------------|-------------------------|--------|------------------------|------------|
-|  Type system of the<br>simply typed λ-calculus |  Page 5, Figure&nbsp;2  | stlc.v |  `Inductive typing`    | `G ⊢ t: T` |
-|  Preservation Theorem                          |  Page 7, Theorem&nbsp;1 | stlc.v |  `Theorem preservation`|            |
+|  Type system of the<br>simply typed λ-calculus |  Page 5,<br>Figure&nbsp;2  | stlc.v |  `Inductive typing`    | `G ⊢ t: T` |
+|  Preservation Theorem                          |  Page 7,<br>Theorem&nbsp;1 | stlc.v |  `Theorem preservation`|            |
 
 
 3. An overview of the libraries and proof frameworks that are used in the proof:
@@ -52,8 +52,8 @@ To simplify the review process, we suggest that authors include the following in
 Inductive term := 
 ... 
 (** The locally nameless representation represents
-    bound variables through de Bruijn indices;
-    therefore we can represent an abstraction λx.t as λt’ *)
+    bound variables through de Bruijn indices; therefore
+    we can represent an abstraction λx.t as λt’ *)
 | abs : term -> term
 ...
 ```
@@ -66,15 +66,13 @@ Inductive term :=
     - obvious lemmas that are tedious to prove (but keep in mind that “obvious” lemmas might not be obvious to reviewers, and that they might not be true);
   * examples:
     - ```coq
-      (** We assume the four colour theorem
-          [Chartrand & Lesniak 2005] *)
+      (** We assume the four colour theorem [Chartrand & Lesniak '05] *)
       Axiom four_colour_theorem : …
       ```
     - ```coq
-      (** We extend the logic with functional
-          extensionality, a well-known axiom
-          that is proved to be consistent with
-          the calculus of inductive constructions *)
+      (** We extend the logic with functional extensionality,
+          a well-known axiom that is proved to be consistent
+          with the calculus of inductive constructions *)
       Require Import FunctionalExtensionality.
       ```
     - provide instructions on how to automatically determine what axioms and unproved hypotheses were used;
