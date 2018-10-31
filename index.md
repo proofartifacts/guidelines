@@ -66,7 +66,8 @@ Inductive term :=
     - obvious lemmas that are tedious to prove (but keep in mind that “obvious” lemmas might not be obvious to reviewers, and that they might not be true);
   * examples:
     - ```coq
-      (** We assume the four colour theorem [Chartrand & Lesniak '05] *)
+      (** We assume the four colour theorem
+          [Chartrand & Lesniak 2005] *)
       Axiom four_colour_theorem : …
       ```
     - ```coq
@@ -77,7 +78,7 @@ Inductive term :=
       ```
     - provide instructions on how to automatically determine what axioms and unproved hypotheses were used;
     - example: 
-      _To verify that there are no added assumptions, run_ `grep postulate *.agda`
+      _To verify that there are no added assumptions, run_<br>`grep postulate *.agda`
 
 
 ### Guidelines for Reviewers
