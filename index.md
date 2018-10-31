@@ -1,3 +1,4 @@
+### Proof Artifact Guidelines for Authors and Reviewers
 The goal of the proof-artifact evaluation is to recognize and promote high-quality proof artifacts, as well as verify that the mechanized formalization of a paper
 * faithfully represents the definitions and theorems in the paper that were claimed to be mechanized, and
 * contains complete proofs for all theorems, except for clearly marked and documented  hypotheses.
@@ -22,10 +23,10 @@ To simplify the review process, we suggest that authors include the following in
  * example:
 
 
-|  Definition / Theorem                          | Paper              | File         |  Name of formalization | Notation    |
-|------------------------------------------------|--------------------|--------------|------------------------|-------------|
-|  Type system of the<br>simply typed λ-calculus |  Page 5, Figure 2  | proof/stlc.v |  `Inductive typing`    | `G ⊢ t : T` |
-|  Preservation Theorem                          |  Page 7, Theorem 1 | proof/stlc.v |  `Theorem preservation`|             |
+|  Definition / Theorem                          | Paper                   | File   |  Name of formalization | Notation    |
+|------------------------------------------------|-------------------------|--------|------------------------|-------------|
+|  Type system of the<br>simply typed λ-calculus |  Page 5, Figure&nbsp;2  | stlc.v |  `Inductive typing`    | `G ⊢ t : T` |
+|  Preservation Theorem                          |  Page 7, Theorem&nbsp;1 | stlc.v |  `Theorem preservation`|             |
 
 
 3. An overview of the libraries and proof frameworks that are used in the proof
@@ -48,15 +49,15 @@ To simplify the review process, we suggest that authors include the following in
 
 6. Document all places where the proof formalization differs from the paper, for example, through simplifications or alternative definitions
   * example (formalizing terms of the λ-calculus in Coq):
-    ```coq
-    Inductive term := 
-    ... 
-    (** The locally nameless representation represents
-        bound variables through de Bruijn indices;
-        therefore we can represent an abstraction λx.t as λt’ *)
-    | abs : term -> term
-    ...
-    ```
+```coq
+Inductive term := 
+... 
+(** The locally nameless representation represents
+    bound variables through de Bruijn indices;
+    therefore we can represent an abstraction λx.t as λt’ *)
+| abs : term -> term
+...
+```
 7. Explicitly state and justify all axioms, assumptions, and unfinished parts of the proof
  
    _We encourage researchers to spend their time on the most important part of the work instead of reproving well-known results. At the same time, given the limited time for reviewing the artifact, it is difficult for the reviewer to assess whether the modified formalization is equivalent to the paper formulation, whether that modification is significant, and whether a lemma with an incomplete proof is obvious._
@@ -66,12 +67,15 @@ To simplify the review process, we suggest that authors include the following in
     - obvious lemmas that are tedious to prove (but keep in mind that “obvious” lemmas might not be obvious to reviewers, and that they might not be true)
   * examples:
     - ```coq
-      (** We assume the four colour theorem [Chartrand & Lesniak 2005] *)
+      (** We assume the four colour theorem
+          [Chartrand & Lesniak 2005] *)
       Axiom four_colour_theorem : …
       ```
     - ```coq
-      (** We extend the logic with functional extensionality, a well-known axiom that is proved    
-          to be consistent with the calculus of inductive constructions *)
+      (** We extend the logic with functional
+          extensionality, a well-known axiom
+          that is proved to be consistent with
+          the calculus of inductive constructions *)
       Require Import FunctionalExtensionality.
       ```
     - provide instructions on how to automatically determine what axioms and unproved hypotheses were used
@@ -92,10 +96,10 @@ To simplify the review process, we suggest that authors include the following in
   * *Completeness*:  Does the artifact formally verify everything that the paper claims it does?
 
 ### Additional Resources
-[How to review formalized mathematics](http://math.andrej.com/2013/08/19/how-to-review-formalized-mathematics/) by Andrej Bauer
-[Checking machine-checked proofs](https://project.inria.fr/coqexchange/checking-machine-checked-proofs/) by Assia Mahboubi
-[Guidelines for Packaging AEC Submissions](http://www.artifact-eval.org/guidelines.html)
-[About Artifact Evaluation](http://www.artifact-eval.org/about.html)
+- [How to review formalized mathematics](http://math.andrej.com/2013/08/19/how-to-review-formalized-mathematics/) by Andrej Bauer
+- [Checking machine-checked proofs](https://project.inria.fr/coqexchange/checking-machine-checked-proofs/) by Assia Mahboubi
+- [Guidelines for Packaging AEC Submissions](http://www.artifact-eval.org/guidelines.html)
+- [About Artifact Evaluation](http://www.artifact-eval.org/about.html)
 
 ### Acknowledgments
 I would like to thank Robert Rand, Derek Dreyer, Robby Findler, Benjamin Pierce, Stephanie Weirich, Daniel Selsam, Marco Vassena, Daniel Schoepe, Ilya Sergey, Abel Nieto, Ralf Jung, Hoang-Hai Dang, Maria Christakis and Philipp Haller for all their feedback which helped greatly improve these guidelines.
