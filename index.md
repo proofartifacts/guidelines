@@ -76,8 +76,8 @@ Inductive term :=
           with the calculus of inductive constructions *)
       Require Import FunctionalExtensionality.
       ```
-    - provide instructions on how to automatically determine what axioms and unproved hypotheses were used;
-    - example: 
+  * provide instructions on how to automatically determine what axioms and unproved hypotheses were used;
+  * example: 
       _To verify that there are no added assumptions, run_<br>`grep postulate *.agda`
 
 
