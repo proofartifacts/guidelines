@@ -10,7 +10,7 @@ Reviewers will be aiming to accept the artifact if
 * it is straightforward to understand how the mechanized proofs correspond to the definitions and theorems in the paper;
 * the proofs of all theorems are complete (except as explained in the paper or artifact documentation).
 
-### [Guidelines for Authors](#authors)
+### Guidelines for Authors
 
 To simplify the review process, we suggest that authors include the following in their proof artifacts:
 1. Step-by-step instructions on how to build and compile the proof:
@@ -81,7 +81,7 @@ Inductive term :=
       _To verify that there are no added assumptions, run_<br>`grep postulate *.agda`
 
 
-### [Guidelines for Reviewers](#reviewers)
+### Guidelines for Reviewers
 
 - Follow the step-by-step instructions to build the proof.
 
@@ -98,11 +98,11 @@ Inductive term :=
   * *Fidelity*: Do the mechanized definitions and theorems correspond precisely to those in the paper? If not, are the points of the departure justified?
   * *Completeness*:  Does the artifact formally verify everything that the paper claims it does?
 
-### [Additional Resources](#resources)
+### Additional Resources
 - [How to review formalized mathematics](http://math.andrej.com/2013/08/19/how-to-review-formalized-mathematics/) by Andrej Bauer
 - [Checking machine-checked proofs](https://project.inria.fr/coqexchange/checking-machine-checked-proofs/) by Assia Mahboubi
 - [Guidelines for Packaging AEC Submissions](http://www.artifact-eval.org/guidelines.html)
 - [About Artifact Evaluation](http://www.artifact-eval.org/about.html)
 
-### [Acknowledgments](#ack)
+### Acknowledgments
 I would like to thank Robert Rand, Derek Dreyer, Robby Findler, Benjamin Pierce, Stephanie Weirich, Daniel Selsam, Marco Vassena, Daniel Schoepe, Ilya Sergey, Abel Nieto, Ralf Jung, Hoang-Hai Dang, Maria Christakis and Philipp Haller for all their feedback which helped greatly improve these guidelines.
