@@ -33,7 +33,7 @@ To simplify the review process, we suggest that authors include the following in
  * the goal is to make the proof readable by a reviewer who is unfamiliar with the frameworks;
  * example: 
   
-   _This type-safety proof uses the locally nameless representation for terms and cofinite quantification in typing judgements (Aydemir et al., 2008). …_
+   _This type-safety proof uses the locally nameless representation for terms and cofinite quantification in typing judgements (Aydemir et al., 2008). ..._
 
 4. An outline of the proof structure and organization:
  * explain the purpose of the different proof files;
@@ -68,7 +68,7 @@ Inductive term :=
     - ```coq
       (** We assume the four colour theorem
           [Chartrand & Lesniak 2005] *)
-      Axiom four_colour_theorem : …
+      Axiom four_colour_theorem : ...
       ```
     - ```coq
       (** We extend the logic with functional extensionality,
