@@ -77,7 +77,7 @@ Inductive term :=
       Require Import FunctionalExtensionality.
       ```
   * provide instructions on how to automatically determine what axioms and unproved hypotheses were used;
-  * example: 
+  * example:<br>
       _To verify that there are no added assumptions, run_<br>`grep postulate *.agda`
 
 
