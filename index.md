@@ -1,14 +1,14 @@
 ### Introduction
 The goal of the proof-artifact evaluation is to recognize and promote high-quality proof artifacts, as well as verify that the mechanized formalization of a paper
 * faithfully represents the definitions and theorems in the paper that were claimed to be mechanized, and
-* contains complete proofs for all theorems, except for clearly marked and documented  hypotheses.
+* contains complete proofs for all theorems (which may rely on documented and justified hypotheses and axioms).
 
 Authors should organize and document their artifact sufficiently to ensure that a reviewer can complete their assessment within one day.
 
 Reviewers will be aiming to accept the artifact if
 * it can be reviewed in the allocated time;
 * it is straightforward to understand how the mechanized proofs correspond to the definitions and theorems in the paper;
-* the proofs of all theorems are complete (except as explained in the paper or artifact documentation).
+* the proofs of all theorems are complete (but may refer to clearly documented hypotheses and axioms).
 
 ### Guidelines for Authors
 
@@ -87,7 +87,7 @@ Inductive term :=
 
 - Verify that the code compiles.
 
-- Check whether the code contains undocumented assumptions or unfinished proofs, such as the use of `Axiom` or `Admitted.` in Coq, `postulate` or `{!!}` in Agda.
+- Check whether the code contains undocumented assumptions or unfinished proofs, such as the use of `postulate` or `{!!}` in Agda. In Coq, this can be verified using the [`Print Assumptions`](https://coq.inria.fr/refman/proof-engine/vernacular-commands.html#coq:cmd.print-assumptions) command.
 
 - Familiarize yourself with the artifact documentation (proof structure, used frameworks and libraries, representations of data types, stated axioms and hypotheses, etc.) to the extent that is necessary to understand whether the formalizations in the proof and paper are equivalent, modulo the possible deviations that are documented in the paper or artifact.
 
@@ -105,4 +105,4 @@ Inductive term :=
 - [About Artifact Evaluation](http://www.artifact-eval.org/about.html)
 
 ### Acknowledgments
-I would like to thank Robert Rand, Derek Dreyer, Robby Findler, Benjamin Pierce, Stephanie Weirich, Daniel Selsam, Marco Vassena, Daniel Schoepe, Ilya Sergey, Abel Nieto, Ralf Jung, Hoang-Hai Dang, Maria Christakis and Philipp Haller for all their feedback which helped greatly improve these guidelines.
+I would like to thank Robert Rand, Derek Dreyer, Robby Findler, Benjamin Pierce, Stephanie Weirich, Daniel Selsam, Marco Vassena, Daniel Schoepe, Ilya Sergey, Abel Nieto, Ralf Jung, Martin Bodin, Hoang-Hai Dang, Maria Christakis and Philipp Haller for all their feedback which helped greatly improve these guidelines.
